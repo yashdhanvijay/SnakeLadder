@@ -9,7 +9,12 @@ namespace SnakeLadder
             Console.WriteLine("Welcome to Snake and Ladder Problem Statement");
 
             GamePlay playerPosition = new GamePlay();
-            
-        }   
+            playerPosition.Position();
+            GamePlay check = new GamePlay();
+            check.Check();
+            GamePlay dice = new GamePlay();
+            dice.DiceRoll();
+
+        }
     }
 }
