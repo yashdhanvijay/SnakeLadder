@@ -11,7 +11,7 @@ namespace SnakeLadder
     {
         Random random = new Random();
         const int NO_PLAY = 0, LADDER = 1, SNAKE = 2, WINNING_POSITION = 100;
-        int playerPosition = 0;
+        int playerPosition = 0, count = 0;
 
         public void Position()
         {
@@ -22,6 +22,7 @@ namespace SnakeLadder
             int dice = random.Next(1, 7);
             Console.WriteLine("Output of Dice - " + dice);
             _ = this.playerPosition;
+            count++;
             return dice;
         }
         public void Check()
@@ -50,7 +51,8 @@ namespace SnakeLadder
                 }
                 Console.WriteLine("You are at " + this.playerPosition);
             }
-            Console.WriteLine("Congratulations! You won the Game..!");
+            Console.WriteLine("Total dice count will be - " + count);
+            Console.WriteLine("Yuppieee !! You won the game");
         }
     }
 }
